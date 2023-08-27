@@ -27,4 +27,4 @@ Si deseas personalizar las respuestas del chatbot o su comportamiento, puedes ha
 
 ## Contacto
 
-[perfil de GitHub](https://github.com/JoseSanchezMunoz).
+[Mi perfil de GitHub](https://github.com/JoseSanchezMunoz).
