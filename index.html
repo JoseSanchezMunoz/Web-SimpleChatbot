@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!--Codifica caracteres especiales-->
+    <meta charset="utf-8" />
+    <!--meta:kw Palabras clave para el navegador-->
+    <meta name="keywords" content="chatbot, asistente virtual" />
+    <!--meta:desc Descripcion de la pagina-->
+    <meta name="description" content="chatbot" />
+    <!--meta Autor del sitio Web-->
+    <meta name="author" content="José Sánchez Muñoz @https://github.com/JoseSanchezMunoz" />
+    <!--meta Aviso de Copyright del sitio-->
+    <meta name="copyright" content="Chatbot 2023" />
+    <!--meta Indexado del sitio para su vista en el buscador-->
+    <meta name="robots" content="index" />
+    <!--meta:vp Diseño responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--meta:ed Compatibilidad con navegadores antiguos-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--Titulo de la pagina actual-->
+    <title>Chatbot</title>
+    <!--link Icono de la pagina actual-->
+    <link rel="icon" href="img/icono.png" />
+    <!--link Reseteo de los estilos propios del navegador (user-agent) -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!--link Hoja de estilos del sitio-->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Mis asistente virtual</h1>
+    </header>
+    <main>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h1>Chatbot</h1>
+                <p>Recuerde guardar la conversacion (Persistencia por base de datos aun no implementada)</p>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Los mensajes se agregarán aquí -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Escribe un mensaje...">
+                <button id="send-button">Enviar</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Derechos de autor &copy; 2023 <a href="https://github.com/JoseSanchezMunoz" class="custom-link">Github JoseSanchezMunoz</a>
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

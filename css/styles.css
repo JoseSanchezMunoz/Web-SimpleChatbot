@@ -1,0 +1,189 @@
+/* Establecer la fuente predeterminada, eliminar los márgenes y rellenos de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilizamos el encabezado de la página, que tendrá un fondo oscuro y texto blanco centrado */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Aplicamos estilos generales al contenido principal */
+main {
+    margin-top: 5px;
+    padding: 20px;
+}
+
+/* Estilizamos el pie de página, que tendrá un fondo oscuro y texto blanco, y se mantendrá en la parte inferior */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Estilizamos el enlace con clase "custom-link" para que sea blanco y sin subrayado */
+.custom-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* Definir el estilo del contenedor principal del chat */
+.chat-container {
+    /* Establecer un ancho fijo para el chat y centrarlo horizontalmente */
+    width: 400px;
+    margin: 0 auto;
+    /* Agregar un borde delgado alrededor del chat con esquinas redondeadas */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Ocultar el contenido que desborda del contenedor */
+    overflow: hidden;
+    /* Agregar una sombra ligera al contenedor */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Fijar la altura del chat en 500px y organizar elementos en columna */
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Definir el estilo del encabezado del chat */
+.chat-header {
+    /* Establecer un fondo azul y color de texto blanco para el encabezado */
+    background-color: #007bff;
+    color: #fff;
+    /* Agregar relleno al encabezado y centrarlo horizontalmente */
+    padding: 10px;
+    text-align: center;
+    /* Hacer que el texto del encabezado sea negrito */
+    font-weight: bold;
+}
+
+/* Definir el estilo de los elementos <p> dentro del encabezado */
+.chat-header p {
+    /* Agregar relleno y centrar horizontalmente el texto de los elementos <p> */
+    padding: 10px;
+    text-align: center;
+    /* Hacer que el texto de los elementos <p> sea negrito y de tamaño más pequeño */
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/* Definir el estilo del área de mensajes del chat */
+.chat-messages {
+    /* Agregar relleno al área de mensajes y permitir el desplazamiento vertical */
+    padding: 10px;
+    overflow-y: scroll;
+    /* Establecer una altura máxima y permitir que los mensajes crezcan en altura */
+    max-height: 400px;
+    flex-grow: 1;
+    /* Agregar espacio en la parte superior del chatbot */
+    margin-top: 20px;
+}
+
+/* Definir el estilo de los mensajes del usuario ("Tú") */
+.user-message {
+    /* Establecer un fondo celeste y color de texto blanco para los mensajes del usuario */
+    background-color: #3c85d4;
+    color: #fff;
+    /* Agregar relleno y márgenes, y hacer que las esquinas sean redondeadas */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    /* Alinear los mensajes del usuario a la derecha */
+    text-align: right;
+    /* Los mensajes del usuario ocupan el 40% derecho del chat */
+    margin-left: 52%;
+}
+
+/* Definir el estilo de los mensajes del chatbot */
+.bot-message {
+    /* Establecer un fondo azul oscuro y color de texto blanco para los mensajes del chatbot */
+    background-color: #2c2ce6;
+    color: #fff;
+    /* Agregar relleno y márgenes, y hacer que las esquinas sean redondeadas */
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    /* Alinear los mensajes del chatbot a la izquierda */
+    margin-right: 52%;
+}
+
+/* Definir el estilo de la sección de entrada del chat */
+.chat-input {
+    /* Utilizar un diseño de caja flexible para la sección de entrada */
+    display: flex;
+    /* Agregar relleno a la sección de entrada y establecer un fondo gris claro */
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+/* Definir el estilo del cuadro de entrada del usuario */
+#user-input {
+    /* Permitir que el cuadro de entrada ajuste su ancho automáticamente */
+    flex-grow: 1;
+    /* Agregar relleno, un borde delgado y hacer que las esquinas sean redondeadas */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    /* Establecer el color de texto del cuadro de entrada */
+    color: #050505;
+}
+
+/* Definir el estilo del botón "Enviar" */
+#send-button {
+    /* Establecer un fondo azul y color de texto blanco para el botón "Enviar" */
+    background-color: #007bff;
+    color: #fff;
+    /* Eliminar el borde y hacer que las esquinas sean redondeadas */
+    border: none;
+    border-radius: 3px;
+    /* Agregar relleno al botón "Enviar" y un margen izquierdo */
+    padding: 5px 10px;
+    margin-left: 5px;
+    /* Cambiar el cursor al pasar sobre el botón */
+    cursor: pointer;
+}
+
+/* Definir el estilo de los pseudoelementos ::before de los mensajes de usuario y chatbot */
+.user-message::before,
+.bot-message::before {
+    /* Establecer el contenido de los pseudoelementos como el atributo data-sender */
+    content: attr(data-sender);
+    /* Definir el tamaño de fuente, color de texto blanco y alinear el texto a la izquierda */
+    font-size: 12px;
+    color: #fff;
+    text-align: left;
+    /* Mostrar el contenido como un bloque */
+    display: block;
+    /* Agregar un margen inferior para separar el nombre del mensaje */
+    margin-bottom: 3px;
+    /* Agregar espaciado interno alrededor del nombre */
+    padding: 2px 5px;
+    /* Hacer que las esquinas del nombre sean redondeadas */
+    border-radius: 5px;
+}
+
+/* Definir el estilo específico para el pseudoelemento ::before de los mensajes de usuario */
+.user-message::before {
+    /* Cambiar el contenido del pseudoelemento para indicar "Tú:" */
+    content: "Tú:";
+    /* Alinear el texto del nombre a la derecha */
+    text-align: right;
+}
+
+/* Definir el estilo específico para el pseudoelemento ::before de los mensajes del chatbot */
+.bot-message::before {
+    /* Cambiar el contenido del pseudoelemento para indicar "Chatbot:" */
+    content: "Chatbot:";
+    /* Alinear el texto del nombre a la izquierda */
+    text-align: left;
+}
