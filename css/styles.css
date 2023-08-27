@@ -30,7 +30,6 @@ footer {
     width: 100%;
 }
 
-
 /* Estilizamos el enlace con clase "custom-link" para que sea blanco y sin subrayado */
 .custom-link {
     text-decoration: none;
@@ -40,7 +39,8 @@ footer {
 /* Definir el estilo del contenedor principal del chat */
 .chat-container {
     /* Establecer un ancho fijo para el chat y centrarlo horizontalmente */
-    width: 400px;
+    width: 80%;
+    max-width: 400px;
     margin: 0 auto;
     /* Agregar un borde delgado alrededor del chat con esquinas redondeadas */
     border: 1px solid #ccc;
@@ -187,3 +187,6 @@ footer {
     /* Alinear el texto del nombre a la izquierda */
     text-align: left;
 }
+
+
+
